@@ -1,0 +1,20 @@
+package pomtests;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.Test;
+
+import pompages.BrowserFactory;
+import pompages.ClsEbay;
+
+public class GoogleSearch
+{
+	@Test
+	public void fnSearch()
+	{
+		WebDriver driver=BrowserFactory.startBrowser("Chrome", "http://ebay.com");
+		ClsEbay c=new ClsEbay(driver);
+		c.fnSearch("sony");
+		c.fnProdSearch("Cameras & Photo");
+	}
+
+}

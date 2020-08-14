@@ -1,0 +1,30 @@
+package pompages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+
+public class ClsEbay {
+	public static WebDriver wd;
+	public ClsEbay(WebDriver d)
+	{
+		wd=d;
+	}
+	By catitem=By.id("gh-cat");
+	By textbox=By.id("gh-ac");
+	By btntext=By.id("gh-btn");
+	public void fnSearch(String prodName)
+	{
+		wd.findElement(textbox).sendKeys(prodName);
+		wd.findElement(btntext).click();
+	}
+	public void fnProdSearch(String cat)
+	{
+		WebElement wb=wd.findElement(catitem);
+		Select s=new Select(wb);
+		s.selectByVisibleText(cat);
+	
+	}
+
+}

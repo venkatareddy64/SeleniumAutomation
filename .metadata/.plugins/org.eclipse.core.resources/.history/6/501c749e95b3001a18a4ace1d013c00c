@@ -1,0 +1,19 @@
+package pomtests;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.Test;
+
+import pompages.BrowserFactory;
+import pompages.ClsAmazon;
+
+public class AmazonProdSearch 
+{
+	@Test
+	public void prodsearch()
+	{
+		WebDriver driver=BrowserFactory.startBrowser("Chrome", "http://amazon.in");
+		ClsAmazon c=new ClsAmazon(driver);
+		c.AmazonLogin("+919133065852", "venkat123");
+	}
+
+}

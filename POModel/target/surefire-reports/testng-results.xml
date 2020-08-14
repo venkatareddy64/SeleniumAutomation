@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="115568" started-at="2020-06-24T15:50:29 IST" finished-at="2020-06-24T15:52:25 IST">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="115568" started-at="2020-06-24T15:50:29 IST" finished-at="2020-06-24T15:52:25 IST">
+      <class name="pomtests.DataDrivenProductCatSearch">
+        <test-method status="PASS" signature="ebayTest(java.lang.String, java.lang.String)[pri:0, instance:pomtests.DataDrivenProductCatSearch@3c0ecd4b]" name="ebayTest" duration-ms="36326" started-at="2020-06-24T15:51:17 IST" data-provider="ebaydata" finished-at="2020-06-24T15:51:54 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Cameras & Photo]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Sony]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ebayTest -->
+        <test-method status="PASS" signature="ebayTest(java.lang.String, java.lang.String)[pri:0, instance:pomtests.DataDrivenProductCatSearch@3c0ecd4b]" name="ebayTest" duration-ms="31233" started-at="2020-06-24T15:51:54 IST" data-provider="ebaydata" finished-at="2020-06-24T15:52:25 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Baby]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[toys]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ebayTest -->
+      </class> <!-- pomtests.DataDrivenProductCatSearch -->
+      <class name="keyworddriven.KeywordDataDrivenFramework">
+        <test-method status="PASS" signature="myTest()[pri:0, instance:keyworddriven.KeywordDataDrivenFramework@598067a5]" name="myTest" duration-ms="47818" started-at="2020-06-24T15:50:29 IST" finished-at="2020-06-24T15:51:17 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- myTest -->
+      </class> <!-- keyworddriven.KeywordDataDrivenFramework -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

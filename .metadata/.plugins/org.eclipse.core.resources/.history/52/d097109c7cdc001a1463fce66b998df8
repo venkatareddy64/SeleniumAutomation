@@ -1,0 +1,31 @@
+package com.cse.www;
+
+import java.util.List;
+
+import javax.crypto.KeyAgreementSpi;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class UsingSelectable 
+{
+
+	public static void main(String[] args) 
+	{
+		 System.setProperty("webdriver.chrome.driver", "C:\\Users\\susmitha\\SeleniumJars\\chromedriver.exe");
+	      WebDriver driver=new ChromeDriver();
+	      driver.get("https://jqueryui.com/selectable/");
+	      WebElement list=driver.findElement(By.id("selectable"));
+	      List<WebElement>item=list.findElements(By.tagName("li"));
+	      Actions a=new Actions(driver);
+	      a.keyDown(Keys.CONTROL).click(item.get(2)).click(item.get(2)).click(item.get(4));
+	      
+	    
+
+	}
+
+}

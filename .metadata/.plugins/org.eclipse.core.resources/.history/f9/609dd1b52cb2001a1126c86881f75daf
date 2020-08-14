@@ -1,0 +1,12 @@
+package pomtests;
+
+import pompages.BrowserFactory;
+
+public class GoogleSearch
+{
+	public static void main(String args[])
+	{
+		WebDriver driver=BrowserFactory.startBrowser("chrome", "http://google.com");
+	}
+
+}

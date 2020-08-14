@@ -1,0 +1,17 @@
+package Action;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class GuruUploadFile {
+
+	public static void main(String[] args)
+	{
+		WebDriver driver=new ChromeDriver();
+		driver.get("http://demo.guru99.com/test/upload/");
+		driver.findElement(By.xpath("//*[@id=\'uploadfile_0\']")).click();
+      
+	}
+
+}

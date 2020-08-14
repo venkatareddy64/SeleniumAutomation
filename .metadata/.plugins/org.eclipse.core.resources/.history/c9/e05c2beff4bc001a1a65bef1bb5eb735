@@ -1,0 +1,10 @@
+package dropdown;
+
+import org.testng.annotations.Test;
+
+public class Spiceject {
+  @Test
+  public void booking() {
+	  System.getProperty("webdriver.chrome.driver", "D:\\chromedriver.exe")
+  }
+}

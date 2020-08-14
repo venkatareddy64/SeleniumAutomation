@@ -1,0 +1,27 @@
+package pompages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class ClsAmazon 
+{
+	public static WebDriver wd;
+	public ClsAmazon(WebDriver d)
+	{
+		wd=d;
+	}
+	By signin=By.cssSelector("#nav-signin-tooltip > a > span");
+	By uname=By.xpath("//*[@id=\'ap_email\']");
+	By cont=By.xpath("//*[@id=\'continue\']");
+	By pwd=By.xpath("//*[@id=\'ap_password\']");
+	By login=By.xpath("//*[@id=\'signInSubmit\']");
+	public void AmazonLogin(String username,String password)
+	{
+	wd.findElement(signin).click();
+	wd.findElement(uname).sendKeys(username);
+	wd.findElement(cont).click();
+	wd.findElement(pwd).sendKeys(password);
+	wd.findElement(login).click();
+	}
+
+}

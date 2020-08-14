@@ -1,0 +1,29 @@
+package com.cse.www;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class UsingTable 
+{
+	public static void main(String[] args) 
+	{
+		System.setProperty("webdriver.chrome.driver", "D:\\chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		driver.get("https://www.w3schools.com/html/html_tables.asp");
+		int r=driver.findElements(By.xpath("//*[@id=\"customers\"]/tbody/tr")).size();
+		System.out.println(r);
+		int c=driver.findElements(By.xpath("//*[@id=\"customers\"]/tbody/tr/th")).size();
+		System.out.println(c);
+		for(int i=2;i<r;i++)
+		{
+			for(int j=1;i<c;j++)
+			{
+			System.out.print(driver.findElement(By.xpath("//*[@id='customers']/tbody/tr[1]/th["+j+"]")).getText()+"  ");
+			}
+			break;
+		}
+
+	}
+
+}

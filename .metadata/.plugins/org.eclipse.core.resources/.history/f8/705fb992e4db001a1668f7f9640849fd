@@ -1,0 +1,18 @@
+package com.cse.www;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class UsingCalender 
+{
+
+	public static void main(String[] args) 
+	{
+       System.setProperty("webdriver.chrome.driver", "D://chromedriver.exe");
+       WebDriver driver=new ChromeDriver();
+       driver.get("http://redbus.in");
+       driver.findElement(By.xpath("//*[@id=\'search\']/div/div[3]/span")).click();
+	}
+
+}

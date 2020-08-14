@@ -1,0 +1,36 @@
+package pompages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+
+public class ClsAmazon 
+{
+	public static WebDriver wd;
+	public ClsAmazon(WebDriver d)
+	{
+		wd=d;
+	}
+	By signin=By.cssSelector("#nav-signin-tooltip > a > span");
+	By uname=By.xpath("//*[@id=\'ap_email\']");
+	By cont=By.xpath("//*[@id=\'continue\']");
+	By pwd=By.xpath("//*[@id=\'ap_password\']");
+	By login=By.xpath("//*[@id=\'signInSubmit\']");
+	By nav=By.xpath("//*[@id=\'nav-link-accountList\']/span[2]/span")
+	By signout=By.cssSelector("#nav-item-signout > span");
+	public void AmazonLogin(String username,String password)
+	{
+	wd.findElement(signin).click();
+	wd.findElement(uname).sendKeys(username);
+	wd.findElement(cont).click();
+	wd.findElement(pwd).sendKeys(password);
+	wd.findElement(login).click();
+WebElement wb=wd.findElement(nav);
+	Actions a=new Actions(wd);
+	a.moveToElement(wb);
+	wd.findElement(signout).click();
+	
+	}
+
+}

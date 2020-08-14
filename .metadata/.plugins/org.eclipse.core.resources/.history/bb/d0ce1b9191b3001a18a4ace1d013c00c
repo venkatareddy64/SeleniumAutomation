@@ -1,0 +1,14 @@
+package pomtests;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.Test;
+
+import pompages.BrowserFactory;
+
+public class AmazonTest {
+  @Test
+  public void amazonprodsearch()
+  {
+	  WebDriver driver=BrowserFactory.startBrowser("Chrome", "http://ebay.com"); ClsAmazon c=new ClsAmazon(driver);
+  }
+}

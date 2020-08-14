@@ -1,0 +1,22 @@
+package dropdown;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.Test;
+
+public class Spiceject {
+  @Test
+  public void booking() {
+	  System.getProperty("webdriver.chrome.driver", "D:\\chromedriver.exe");
+	  WebDriver driver=new ChromeDriver();
+	  driver.get("http://spicejet.com");
+	  driver.findElement(By.id("divpaxinfo")).click();
+	  WebElement wb=driver.findElement(By.id("ctl00_mainContent_ddl_Adult"));
+	  Select s=new Select(wb);
+     s.selectByIndex(4);
+     System.out.println( driver.findElement(By.id("divpaxinfo")).getText());
+  }
+}
